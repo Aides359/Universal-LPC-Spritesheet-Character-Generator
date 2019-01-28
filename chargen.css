@@ -35,6 +35,16 @@ p {
 	padding-left: 50px;
 }
 
+#dowloadLinkBox
+{
+    display: block;
+}
+
+#dowloadLinkBox a
+{
+    display: block;
+}
+
 #save {
     width: 60%;
     min-width: 832px;

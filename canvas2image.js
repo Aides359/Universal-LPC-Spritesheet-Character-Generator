@@ -145,7 +145,8 @@ var Canvas2Image = (function() {
 
 	// sends the generated file to the client
 	var saveFile = function(strData) {
-		document.location.href = strData;
+		let downloadElement = $('<p>' + strData + '</p>');
+		$('#dowloadLinkBox').append(downloadElement);
 	}
 
 	var makeDataURI = function(strData, strMime) {
@@ -186,7 +187,8 @@ var Canvas2Image = (function() {
 			if (bReturnImg) {
 				return makeImageObject(strData);
 			} else {
-				saveFile(strData.replace("image/png", strDownloadMime));
+				return strData;
+				//saveFile(strData.replace("image/png", strDownloadMime), fileName);
 			}
 			return true;
 		},
